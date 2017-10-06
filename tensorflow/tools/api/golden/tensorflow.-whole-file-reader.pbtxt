@@ -1,46 +1,22 @@
-path: "tensorflow.WholeFileReader"
-tf_class {
-  is_instance: "<class \'tensorflow.python.ops.io_ops.WholeFileReader\'>"
-  is_instance: "<class \'tensorflow.python.ops.io_ops.ReaderBase\'>"
-  is_instance: "<type \'object\'>"
-  member {
-    name: "reader_ref"
-    mtype: "<type \'property\'>"
-  }
-  member {
-    name: "supports_serialize"
-    mtype: "<type \'property\'>"
-  }
-  member_method {
-    name: "__init__"
-    argspec: "args=[\'self\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "num_records_produced"
-    argspec: "args=[\'self\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "num_work_units_completed"
-    argspec: "args=[\'self\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "read"
-    argspec: "args=[\'self\', \'queue\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "read_up_to"
-    argspec: "args=[\'self\', \'queue\', \'num_records\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "reset"
-    argspec: "args=[\'self\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "restore_state"
-    argspec: "args=[\'self\', \'state\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-  member_method {
-    name: "serialize_state"
-    argspec: "args=[\'self\', \'name\'], varargs=None, keywords=None, defaults=[\'None\'], "
-  }
-}
+ELNOTES: Add tf.contrib.distributions.MixtureSameFamily.log_cdf.
+:/reun/a
+170960054  Extend `tf.contrib.distributions.bijector` API to handle some non-injective transforms.
+170887218  tf.contrib.distributions.Affine incorrectly computed log-det-jacobian.
+
+170887206  tf.random_gamma incorrectly handles non-batch, scalar draws.
+170808354  Added tf.spectral.dct, for computing the DCT-II.
+170753517  Added Mel-Frequency Cepstral Coefficient support to tf.contrib.signal (with GPU and gradient support).
+170746452 RELNOTES=Add a self-check on `import tensorflow` for Windows DLL issues.
+170742556  Add NCHW support to tf.depth_to_space on GPU.
+170740862  Remove seldom used and unnecessary `tf.contrib.data.Iterator.dispose_op()`.
+170740167  SinhArcsinh (scalar) distribution added to contrib.distributions
+170597778  Makes `GANEstimator` opensource.
+170500659  Estimator.export_savedmodel() now includes all valid serving signatures that can be constructed from the Serving Input Receiver and all available ExportOutputs. for instance, a classifier may provide regression- and prediction-flavored outputs, in addition to the classification-flavored one. Building signatures from these allows TF Serving to honor requests using the different APIs (Classify, Regress, and Predict). Furthermore, serving_input_receiver_fn() may now specify alternative subsets of nodes that may act as inputs. This allows, for instance, producing a prediction signature for a classifier that accepts raw Tensors instead of a serialized tf.Example.
+170497611  resolved a race condition in TensorForest TreePredictionsV4Op.
+170492906  Remove `tf.contrib.data.Iterator.from_dataset()` method. Use `Dataset.make_initializable_iterator() instead.
+170445297  Reorders some TFGAN losses functions in a non-backwards compatible way.
+170421443  Add `tf.contrib.bayesflow.hmc`.
+170390732  Add tf.contrib.distributions.MixtureSameFamily.
+170371896  By default, Dataset.shuffle() always reshuffles after each iteration.
+170358662  Add `tf.contrib.bayesflow.metropolis_hastings`.
+170353914  Add `log_rate` parameter to `tf.contrib.distributions.Poisson`.

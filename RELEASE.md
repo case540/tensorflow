@@ -11,7 +11,7 @@
   * Several custom transformation functions have been added, including
     `tf.contrib.data.batch_and_drop_remainder()` and
     `tf.contrib.data.sloppy_interleave()`.
-* Add `train_and_evaluate` for simple distributed Estimator training.
+* Add `train_and_evaluate` for simple distributed `Estimator` training.
 * Add `tf.spectral.dct` for computing the DCT-II.
 * Add Mel-Frequency Cepstral Coefficient support to `tf.contrib.signal`
   (with GPU and gradient support).
@@ -27,10 +27,10 @@
   different APIs (Classify, Regress, and Predict). Furthermore,
   `serving_input_receiver_fn()` may now specify alternative subsets of nodes
   that may act as inputs. This allows, for instance, producing a prediction
-  signature for a classifier that accepts raw Tensors instead of a serialized
-  tf.Example.
+  signature for a classifier that accepts raw `Tensors` instead of a serialized
+  `tf.Example`.
 * Add `tf.contrib.bayesflow.hmc`.
-* Add tf.contrib.distributions.MixtureSameFamily.
+* Add `tf.contrib.distributions.MixtureSameFamily`.
 * Make `Dataset.shuffle()` always reshuffles after each iteration by default.
 * Add `tf.contrib.bayesflow.metropolis_hastings`.
 * Add `log_rate` parameter to `tf.contrib.distributions.Poisson`.
